@@ -75,7 +75,7 @@ const Services = () => {
         >
           {services.map((service) => (
             <HoverBorderGradient key={service.id}>
-              <div className="w-full flex flex-col gap-4 py-6 px-4 bg-gray-900">
+              <div className="w-full flex flex-col justify-between gap-4 py-6 px-4 bg-gray-900">
                 <div className="mb-4 flex justify-center">{service.icon}</div>
                 <h3 className="text-xl font-semibold mb-2">{service.title}</h3>
                 <p className="text-gray-400 text-sm">{service.desc}</p>
