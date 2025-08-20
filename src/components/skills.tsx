@@ -94,10 +94,10 @@ const Skills = () => {
         {skills.map((skill, index) => (
           <HoverBorderGradient
             key={index}
-            className="w-full  bg-white dark:bg-slate-900 text-black dark:text-gray-300  cursor-pointer transition duration-300 delay-75 rounded-sm"
+            className="w-full  bg-gray-900 text-gray-100  cursor-pointer transition duration-300 delay-75 rounded-sm"
           >
             <motion.div
-              className="w-full flex flex-col items-center gap-2 py-3"
+              className="w-full flex flex-col items-center gap-2 py-3 bg-gray-900"
               initial={{ opacity: 0, scale: 0.8 }}
               whileInView={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.6, delay: index * 0.05 }}

@@ -50,7 +50,7 @@ const Hero = () => {
   return (
     <section
       id="Home"
-      className="w-full min-h-screen flex flex-col md:flex-row items-center justify-center text-white"
+      className="w-full min-h-screen flex flex-col md:flex-row items-center justify-center bg-gray-900 text-white"
     >
       <HeroHighlight>
         <div className="w-full h-full py-32 sm:py-0 px-4">
