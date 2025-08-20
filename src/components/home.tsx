@@ -166,7 +166,7 @@ const Hero = () => {
               initial={{ opacity: 0, x: 50 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8, ease: "easeOut" }}
-              className="flex lg:hidden flex-col sm:flex sm:flex-row gap-4 mt-4"
+              className="flex flex-col sm:hidden  gap-4 mt-6"
             >
               <Link
                 href="#Contact"
