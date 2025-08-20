@@ -79,7 +79,7 @@ const Contact = () => {
             transition={{ duration: 0.8, delay: 0.8 }}
             className="w-full max-w-lg mx-auto"
           >
-            <div className=" backdrop-blur-md border border-white/20 rounded-2xl shadow-xl p-4">
+            <div className=" backdrop-blur-md border border-white/20 rounded-lg shadow-xl p-4">
               <h3 className="text-xl sm:text-2xl font-semibold text-center mb-6">
                 Send a Message
               </h3>
