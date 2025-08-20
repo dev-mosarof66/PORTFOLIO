@@ -16,7 +16,7 @@ const Services = () => {
       id: 2,
       icon: <FaMobileAlt className="text-4xl text-purple-500" />,
       title: "Mobile Development",
-      desc: "Creating cross-platform mobile apps with React Native for seamless performance.",
+      desc: "Creating cross-platform mobile apps with React Native with optimized and seamless performance.",
     },
     {
       id: 3,
