@@ -22,7 +22,7 @@ const dummyProjects = [
     id: 2,
     title: "Alpha - Icon Finding Platform",
     image: blogImage,
-    live: "#",
+    live: "https://alpha-icon-app.vercel.app",
     code: "https://github.com/dev-mosarof66/ALPHA-ICON-APP",
   },
   {
