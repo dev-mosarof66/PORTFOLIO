@@ -59,7 +59,7 @@ const Navbar = () => {
     >
       <div className="w-full sm:w-[90%] lg:w-[80%] mx-auto flex items-center justify-between fixed backdrop-blur-sm mt-6 py-3 px-6">
         {/* Logo */}
-        <h1 className="text-xl font-bold">Logo</h1>
+        <h1 className="text-xl font-bold">{""}</h1>
 
         {/* Mobile Menu Icon */}
         <div className="block md:hidden cursor-pointer">

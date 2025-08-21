@@ -13,31 +13,31 @@ import { GlowingEffect } from "./ui/glowing-effect";
 const dummyProjects = [
   {
     id: 1,
-    title: "Portfolio Website",
+    title: "Neura - Coding Learning Platform",
     image: portfolioImage,
     live: "#",
-    code: "#",
+    code: "https://github.com/dev-mosarof66/AI-TUTOR",
   },
   {
     id: 2,
-    title: "E-commerce App",
-    image: ecommerceImage,
+    title: "Alpha - Icon Finding Platform",
+    image: blogImage,
     live: "#",
-    code: "#",
+    code: "https://github.com/dev-mosarof66/ALPHA-ICON-APP",
   },
   {
     id: 3,
-    title: "Task Manager App",
+    title: "Plan Management System",
     image: taskManagerImage,
     live: "#",
-    code: "#",
+    code: "https://github.com/dev-mosarof66/TO-DO-APP-CLIENT",
   },
   {
     id: 4,
-    title: "Blog Platform",
-    image: blogImage,
+    title: "E-commerce Website",
+    image: ecommerceImage,
     live: "#",
-    code: "#",
+    code: "https://github.com/dev-mosarof66/rencart",
   },
 ];
 

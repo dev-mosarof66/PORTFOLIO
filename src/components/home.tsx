@@ -50,10 +50,10 @@ const Hero = () => {
   return (
     <section
       id="Home"
-      className="w-full min-h-screen flex flex-col md:flex-row items-center justify-center bg-gray-900 text-white"
+      className="w-full min-h-screen bg-gray-900 text-white"
     >
-      <HeroHighlight>
-        <div className="w-full h-full py-32 sm:py-0 px-4">
+      <HeroHighlight className="w-full h-full">
+        <div className="w-full h-full lg:flex lg:items-center lg:justify-center py-24 px-4">
           <div className="w-full sm:w-[90%] lg:w-[80%] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8">
             {/* LEFT SIDE */}
             <motion.div
