@@ -100,7 +100,7 @@ const Contact = () => {
               Let’s turn ideas into reality — drop me a message and let’s build
               something amazing together!
             </p>
-            <div className="flex items-center justify-center px-4 gap-6 text-3xl text-gray-400">
+            <div className="flex items-center justify-center px-4 gap-6  text-gray-400">
               {socialLinks.map((item) => (
                 <Link
                   key={item.id}
@@ -109,7 +109,7 @@ const Contact = () => {
                   rel="noopener noreferrer"
                   className="hover:text-purple-400 transition-transform duration-300 hover:scale-110"
                 >
-                  <item.icon size={22} />
+                  <item.icon size={25} />
                 </Link>
               ))}
             </div>
@@ -122,7 +122,7 @@ const Contact = () => {
             transition={{ duration: 0.8, delay: 0.8 }}
             className="w-full max-w-lg mx-auto"
           >
-            <div className="backdrop-blur-md border border-white/20 rounded-lg shadow-xl p-4">
+            <div className="backdrop-blur-md border border-white/20  shadow-xl p-4">
               <h3 className="text-xl sm:text-2xl font-semibold text-center mb-6">
                 Send a Message
               </h3>
@@ -133,7 +133,7 @@ const Contact = () => {
                   value={input.email}
                   onChange={handleChange}
                   placeholder="Your Email"
-                  className="w-full text-sm px-4 py-2 rounded-lg border border-white/30 text-white placeholder-white/70 focus:outline-none focus:ring focus:ring-purple-400 transition"
+                  className="w-full text-sm px-4 py-2  border border-white/30 text-white placeholder-white/70 focus:outline-none focus:ring focus:ring-purple-400 transition"
                 />
                 <textarea
                   name="message"
@@ -141,11 +141,11 @@ const Contact = () => {
                   onChange={handleChange}
                   placeholder="Your Message"
                   rows={5}
-                  className="w-full text-sm px-4 py-3 rounded-lg border border-white/30 text-white placeholder-white/70 focus:outline-none focus:ring focus:ring-purple-400 transition duration-300 delay-75 resize-none"
+                  className="w-full text-sm px-4 py-3  border border-white/30 text-white placeholder-white/70 focus:outline-none focus:ring focus:ring-purple-400 transition duration-300 delay-75 resize-none"
                 />
                 <button
                   type="submit"
-                  className="w-full py-2 flex items-center justify-center gap-2 rounded-sm bg-purple-700 hover:bg-purple-800 transition duration-300 delay-75 shadow-md cursor-pointer"
+                  className="w-full py-2 flex items-center justify-center gap-2  bg-purple-700 hover:bg-purple-800 transition duration-300 delay-75 shadow-md cursor-pointer"
                 >
                   {loading ? (
                     "Sending Mail..."

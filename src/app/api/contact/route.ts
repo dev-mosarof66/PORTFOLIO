@@ -5,7 +5,7 @@ export async function POST(req: Request) {
     try {
         const { email, message } = await req.json();
 
-        console.log('backend called: ', email, message)
+        // console.log('backend called: ', email, message)
 
         const transporter = nodemailer.createTransport({
             service: "gmail",
