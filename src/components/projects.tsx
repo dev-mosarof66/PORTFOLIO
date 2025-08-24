@@ -3,9 +3,9 @@ import React from "react";
 import { motion } from "framer-motion";
 import { FaExternalLinkAlt, FaGithub } from "react-icons/fa";
 import ecommerceImage from "@/../public/ecommerce.webp";
-import portfolioImage from "@/../public/portfolio.jpg";
 import taskManagerImage from "@/../public/taskmanager.png";
 import AlphaIcon from '@/../public/alpha.png';
+import AIcon from "@/../public/ai-tutor.png";
 import Image, { StaticImageData } from "next/image";
 import Link from "next/link";
 import { GlowingEffect } from "./ui/glowing-effect";
@@ -14,8 +14,8 @@ const dummyProjects = [
   {
     id: 1,
     title: "Neura - Coding Learning Platform",
-    image: portfolioImage,
-    live: "#",
+    image: AIcon,
+    live: "https://ai-tutor-gules-sigma.vercel.app/",
     code: "https://github.com/dev-mosarof66/AI-TUTOR",
   },
   {
