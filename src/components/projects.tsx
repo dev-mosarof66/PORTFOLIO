@@ -15,7 +15,7 @@ const dummyProjects = [
     id: 1,
     title: "Neura - Coding Learning Platform",
     image: AIcon,
-    live: "https://ai-tutor-gules-sigma.vercel.app/",
+    live: "https://ai-tutor-flame.vercel.app/",
     code: "https://github.com/dev-mosarof66/AI-TUTOR",
   },
   {
