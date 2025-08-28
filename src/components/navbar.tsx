@@ -33,11 +33,12 @@ const Navbar = () => {
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
+            console.log('the section is running now: ',entry.target.id)
             setActiveTab(entry.target.id);
           }
         });
       },
-      { threshold: 0.6 }
+      { threshold: 0.3,rootMargin:'-80px 0px 0px 0px' }
     );
 
     sections.forEach((section) => {
@@ -50,6 +51,7 @@ const Navbar = () => {
       });
     };
   }, [nav]);
+
 
   return (
     <motion.div
@@ -104,6 +106,7 @@ const Navbar = () => {
                 onClick={() => {
                   scrollToSection(item);
                   setHandleNav(false);
+                  setActiveTab(item)
                 }}
                 className={`cursor-pointer text-sm transition-colors duration-300 ${
                   activeTab === item
