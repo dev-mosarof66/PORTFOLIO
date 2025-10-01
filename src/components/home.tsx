@@ -12,7 +12,6 @@ import { ReactTyped } from "react-typed";
 import { motion } from "motion/react";
 import Link from "next/link";
 import { BackgroundGradient } from "./ui/background-gradient";
-import { HeroHighlight } from "./ui/hero-highlight";
 
 const Hero = () => {
   const socialLinks = [
@@ -40,8 +39,8 @@ const Hero = () => {
 
   const handleCVDownload = () => {
     const link = document.createElement("a");
-    link.href = "/Mosarof_Hossain_Resume.pdf";
-    link.download = "Mosarof_Hossain_CV.pdf";
+    link.href = "/Mosarof_Hossain.pdf";
+    link.download = "Mosarof_Hossain.pdf";
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
@@ -50,10 +49,9 @@ const Hero = () => {
   return (
     <section
       id="Home"
-      className="w-full min-h-screen bg-gray-900 text-white"
+      className="w-full min-h-screen flex items-center justify-center bg-gray-900 text-white"
     >
-      <HeroHighlight className="w-full h-full">
-        <div className="w-full h-full lg:flex lg:items-center lg:justify-center py-24 px-4">
+       <div className="w-full h-full lg:flex lg:items-center lg:justify-center py-24 px-4">
           <div className="w-full sm:w-[90%] lg:w-[80%] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8">
             {/* LEFT SIDE */}
             <motion.div
@@ -184,7 +182,6 @@ const Hero = () => {
             </motion.div>
           </div>
         </div>
-      </HeroHighlight>
     </section>
   );
 };

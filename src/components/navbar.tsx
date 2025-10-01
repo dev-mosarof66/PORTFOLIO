@@ -33,7 +33,6 @@ const Navbar = () => {
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            console.log('the section is running now: ',entry.target.id)
             setActiveTab(entry.target.id);
           }
         });
@@ -57,11 +56,11 @@ const Navbar = () => {
     <motion.div
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
-      className="w-full flex items-center justify-center fixed my-3 z-50"
+      className="w-full flex items-center justify-center fixed z-50 backdrop-blur-sm py-6"
     >
-      <div className="w-full sm:w-[90%] lg:w-[80%] mx-auto flex items-center justify-between fixed backdrop-blur-sm mt-6 py-3 px-6">
+      <div className="w-full sm:w-[90%] lg:w-[80%] mx-auto flex items-center justify-between ">
         {/* Logo */}
-        <h1 className="text-xl font-bold">{""}</h1>
+        <h1 className="text-xl font-bold">{"M"}</h1>
 
         {/* Mobile Menu Icon */}
         <div className="block md:hidden cursor-pointer">
@@ -78,7 +77,7 @@ const Navbar = () => {
             <p
               key={item}
               onClick={() => scrollToSection(item)}
-              className={`cursor-pointer text-sm transition-colors duration-300 ${
+              className={`cursor-pointer text-sm sm:text-base transition-colors duration-300 ${
                 activeTab === item
                   ? "text-purple-500 hover:text-purple-500/80"
                   : "text-gray-100 hover:text-gray-100/80"
