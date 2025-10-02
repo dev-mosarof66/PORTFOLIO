@@ -56,7 +56,7 @@ const Navbar = () => {
     <motion.div
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
-      className="w-full flex items-center justify-center fixed z-50 backdrop-blur-sm py-6"
+      className="w-full flex items-center justify-center fixed z-50 backdrop-blur-sm py-6 px-6"
     >
       <div className="w-full sm:w-[90%] lg:w-[80%] mx-auto flex items-center justify-between ">
         {/* Logo */}
