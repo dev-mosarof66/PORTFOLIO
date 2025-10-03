@@ -6,40 +6,27 @@ import { FaFacebook, FaLinkedin, FaWhatsapp, FaYoutube } from "react-icons/fa";
 import Link from "next/link";
 import axios from "axios";
 import toast from "react-hot-toast";
+import { useTheme } from "./ThemeWrapper";
 
 const Contact = () => {
+  const { theme } = useTheme();
+
+  const bgColor = theme === "dark" ? "bg-gray-900 text-white" : "bg-white text-gray-900";
+  const cardBg = theme === "dark" ? "backdrop-blur-md border border-white/20 shadow-xl" : "bg-gray-100 border border-gray-300 shadow-md";
+  const inputBg = theme === "dark" ? "bg-gray-800 border border-white/30 text-white placeholder-white/70" : "bg-gray-50 border border-gray-300 text-gray-900 placeholder-gray-500";
+  const btnBg = theme === "dark" ? "bg-purple-700 hover:bg-purple-800 text-white" : "bg-purple-500 hover:bg-purple-600 text-white";
+
   const socialLinks = [
-    {
-      id: 1,
-      icon: FaLinkedin,
-      link: "https://www.linkedin.com/in/mosarof066/",
-    },
-    {
-      id: 2,
-      icon: FaFacebook,
-      link: "https://www.facebook.com/md.mosarof.hossain.544610",
-    },
-    {
-      id: 3,
-      icon: FaWhatsapp,
-      link: "https://wa.me/8801853025748",
-    },
-    {
-      id: 4,
-      icon: FaYoutube,
-      link: "https://youtube.com/yourchannel",
-    },
+    { id: 1, icon: FaLinkedin, link: "https://www.linkedin.com/in/mosarof066/" },
+    { id: 2, icon: FaFacebook, link: "https://www.facebook.com/md.mosarof.hossain.544610" },
+    { id: 3, icon: FaWhatsapp, link: "https://wa.me/8801853025748" },
+    { id: 4, icon: FaYoutube, link: "https://youtube.com/yourchannel" },
   ];
 
-  const [input, setInput] = useState({
-    email: "",
-    message: "",
-  });
+  const [input, setInput] = useState({ email: "", message: "" });
   const [loading, setLoading] = useState(false);
 
-  const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
-  ) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
     setInput((prev) => ({ ...prev, [name]: value }));
   };
@@ -51,13 +38,11 @@ const Contact = () => {
     if (!input.email || !input.message) {
       toast.error("Please fill out all fields.");
       setLoading(false);
-
       return;
     }
 
     try {
       const res = await axios.post("/api/contact", input);
-
       if (res.data.success) {
         toast.success("Your email sent successfully!");
         setInput({ email: "", message: "" });
@@ -73,11 +58,8 @@ const Contact = () => {
   };
 
   return (
-    <section
-      id="Contact"
-      className="min-h-screen w-full flex flex-col items-center px-6 py-20 bg-gray-900 text-white"
-    >
-      <div className="w-full max-w-6xl flex flex-col gap-10 ">
+    <section id="Contact" className={`min-h-screen w-full flex flex-col items-center px-6 py-20 ${bgColor}`}>
+      <div className="w-full max-w-6xl flex flex-col gap-10">
         {/* Top Section - Header */}
         <motion.h2
           className="text-4xl font-bold text-center mb-8"
@@ -96,11 +78,11 @@ const Contact = () => {
             transition={{ duration: 0.8, delay: 0.4 }}
             className="flex flex-col items-center justify-center lg:items-start lg:text-left gap-6"
           >
-            <p className="text-sm sm:text-base text-gray-300 w-full sm:w-md text-center">
+            <p className={`text-sm sm:text-base w-full sm:w-md text-center ${theme === "dark" ? "text-gray-300" : "text-gray-700"}`}>
               Let’s turn ideas into reality — drop me a message and let’s build
               something amazing together!
             </p>
-            <div className="flex items-center justify-center px-4 gap-6  text-gray-400">
+            <div className={`flex items-center justify-center px-4 gap-6 ${theme === "dark" ? "text-gray-400" : "text-gray-600"}`}>
               {socialLinks.map((item) => (
                 <Link
                   key={item.id}
@@ -122,8 +104,8 @@ const Contact = () => {
             transition={{ duration: 0.8, delay: 0.8 }}
             className="w-full max-w-lg mx-auto"
           >
-            <div className="backdrop-blur-md border border-white/20  shadow-xl p-4">
-              <h3 className="text-xl sm:text-2xl font-semibold text-center mb-6">
+            <div className={`${cardBg} p-4 rounded-lg`}>
+              <h3 className={`text-xl sm:text-2xl font-semibold text-center mb-6 ${theme === "dark" ? "text-white" : "text-gray-900"}`}>
                 Send a Message
               </h3>
               <form onSubmit={handleSubmit} className="space-y-5">
@@ -133,7 +115,7 @@ const Contact = () => {
                   value={input.email}
                   onChange={handleChange}
                   placeholder="Your Email"
-                  className="w-full text-sm px-4 py-2  border border-white/30 text-white placeholder-white/70 focus:outline-none focus:ring focus:ring-purple-400 transition"
+                  className={`w-full text-sm px-4 py-2 rounded ${inputBg} focus:outline-none focus:ring focus:ring-purple-400 transition`}
                 />
                 <textarea
                   name="message"
@@ -141,17 +123,14 @@ const Contact = () => {
                   onChange={handleChange}
                   placeholder="Your Message"
                   rows={5}
-                  className="w-full text-sm px-4 py-3  border border-white/30 text-white placeholder-white/70 focus:outline-none focus:ring focus:ring-purple-400 transition duration-300 delay-75 resize-none"
+                  className={`w-full text-sm px-4 py-3 rounded ${inputBg} focus:outline-none focus:ring focus:ring-purple-400 transition duration-300 delay-75 resize-none`}
                 />
                 <button
                   type="submit"
-                  className="w-full py-2 flex items-center justify-center gap-2  bg-purple-700 hover:bg-purple-800 transition duration-300 delay-75 shadow-md cursor-pointer"
+                  className={`w-full py-2 flex items-center justify-center gap-2 rounded ${btnBg} transition duration-300 delay-75 shadow-md cursor-pointer`}
                 >
-                  {loading ? (
-                    "Sending Mail..."
-                  ) : (
+                  {loading ? "Sending Mail..." : (
                     <>
-                      {" "}
                       <BsFillSendFill />
                       <p>Send Mail</p>
                     </>
