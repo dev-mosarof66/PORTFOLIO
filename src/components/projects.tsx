@@ -5,36 +5,44 @@ import { FaExternalLinkAlt, FaGithub } from "react-icons/fa";
 import ecommerceImage from "@/../public/ecommerce.webp";
 import taskManagerImage from "@/../public/taskmanager.png";
 import AlphaIcon from '@/../public/alpha.png';
+import SenseiIcon from '@/../public/sensei.png';
 import AIcon from "@/../public/ai-tutor.png";
 import Image, { StaticImageData } from "next/image";
 import Link from "next/link";
 import { GlowingEffect } from "./ui/glowing-effect";
 import { useTheme } from "./ThemeWrapper";
 
-const dummyProjects = [
+const projects = [
   {
     id: 1,
     title: "Neura - Coding Learning Platform",
     image: AIcon,
-    live: "https://ai-tutor-flame.vercel.app/",
+    live: "https://ai-tutor-flame.vercel.app",
     code: "https://github.com/dev-mosarof66/AI-TUTOR",
   },
   {
     id: 2,
+    title: "Sensei - Coding Learning Website",
+    image: SenseiIcon,
+    live: "https://sensei-green.vercel.app",
+    code: "https://github.com/dev-mosarof66/sensei.git",
+  },
+  {
+    id: 3,
     title: "Alpha - Icon Finding Platform",
     image: AlphaIcon,
     live: "https://alpha-icon-app.vercel.app",
     code: "https://github.com/dev-mosarof66/ALPHA-ICON-APP",
   },
   {
-    id: 3,
+    id: 4,
     title: "Plan Management System",
     image: taskManagerImage,
     live: "#",
     code: "https://github.com/dev-mosarof66/TO-DO-APP-CLIENT",
   },
   {
-    id: 4,
+    id: 5,
     title: "E-commerce Website",
     image: ecommerceImage,
     live: "#",
@@ -62,7 +70,7 @@ const Projects = () => {
       </motion.h2>
 
       <ul className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-8 max-w-6xl mx-auto">
-        {dummyProjects.map((project, index) => (
+        {projects.map((project, index) => (
           <motion.li
             key={project.id}
             initial={{ opacity: 0, y: 50 }}
