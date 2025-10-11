@@ -5,7 +5,7 @@ import { FaExternalLinkAlt, FaGithub } from "react-icons/fa";
 import ecommerceImage from "@/../public/ecommerce.webp";
 import taskManagerImage from "@/../public/taskmanager.png";
 import AlphaIcon from '@/../public/alpha.png';
-import SenseiIcon from '@/../public/sensei.png';
+import CodemyIcon from '@/../public/sensei.png';
 import AIcon from "@/../public/ai-tutor.png";
 import Image, { StaticImageData } from "next/image";
 import Link from "next/link";
@@ -22,9 +22,9 @@ const projects = [
   },
   {
     id: 2,
-    title: "Sensei - Coding Learning Website",
-    image: SenseiIcon,
-    live: "https://sensei-green.vercel.app",
+    title: "Codemy - Coding Learning Website",
+    image: CodemyIcon,
+    live: "https://codemy-nine.vercel.app",
     code: "https://github.com/dev-mosarof66/sensei.git",
   },
   {
